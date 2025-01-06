@@ -22,7 +22,7 @@ jobs:
             run: npm install
 
           - name: Run server refresh script
-            run: npm run refresh-server
+            run: npm run dev
 
           - name: Configure git
             run: |
