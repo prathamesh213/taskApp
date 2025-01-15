@@ -54,13 +54,15 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 });
 
-const getCurrentUser = asyncHandler(async (req, res) => {
+const getCurrentUser = asyncHandler(async (req,res) => {
     res.status(200).json({ message: 'Current user.' });
 });
 
 const generateJWTToken = id => {
  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });  
 };
-
-
-module.exports = { registerUser, loginUser, getCurrentUser };
+module.exports = {
+    registerUser,
+    loginUser,
+    getCurrentUser,
+  };
