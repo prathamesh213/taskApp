@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 //////////////////// Register a new user////////////////////////////////////////
-const registerUser = asyncHandler(async (req, res) => {
+    const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
@@ -55,7 +55,8 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 const getCurrentUser = asyncHandler(async (req,res) => {
-    res.status(200).json({ message: 'Current user.' });
+    
+    res.status(200).json({ message: 'You are a Authorized current user!' });
 });
 
 const generateJWTToken = id => {
